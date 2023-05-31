@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form>*{
+            margin: 15px;
+        }
+        form input{
+            font-size: 30px;
+
+        }
+        .regis{
+            border: 2px dashed blue;
+            max-width: 500px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+        }
+        .helptext{
+            display: none;
+        }
+        .form-label{
+            display:none;
+        }
+        #image{
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+         <div class="regis">
+             <h1>Sign Up</h1>
+            <img src="/media/profile_images/profile.png" alt="" width="120" height="120" id="image">
+            <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{form.as_p}}
+              <input type="submit" value="Sign Up">
+            </form>
+   
+         </div>
+         <script>
+             document.getElementById('image').addEventListener('click', () =>{
+                   document.getElementById('file').click();
+             })
+             
+         </script>
+</body>
+</html>

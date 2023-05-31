@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Sets equal width for both columns */
+  grid-gap: 10px; /* Adds gap between columns */
+}
+
+.column {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+.grid-container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+.column p {
+  margin: 0;
+}
+

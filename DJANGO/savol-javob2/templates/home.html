@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 8px;
+      }
+      .user{
+        display: flex;
+        align-items: center;
+      }
+      img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Savol Javob</h1>
+    <h3> {{request.user.username}} </h3>
+    {% if request.user.is_authenticated %}
+     <a href="{% url 'logout' %}">LogOut</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+    <a href="{% url 'question' %}">Create question</a>
+    <hr>
+    {% for i in questions %}
+      <div class="user">
+        <div class="pic"><img src="{{i.user.image.url}}" alt="{{i.user.image.url}}"></div>
+        <div class="name">@{{i.user.user}}</div>
+      </div>
+      <p> <a href="{% url 'room' i.id %}"> {{i}} </a> {{i.created_time|timesince}} oldin </p>
+    {% endfor %}
+</body>
+</html>

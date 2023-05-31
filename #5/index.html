@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions & Answers</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <section id="asosiy">
+        <header>
+            <nav>
+                <h1>Savol javob sahifamizga hush kelibsiz</h1>
+                <ul>
+                    <li><a href="#">Asosiy</a></li>
+                    <li><a href="creat_question.html">Savol yaratish</a></li>
+                </ul>     
+            </nav>
+        </header>    
+        <div class="asosiy">
+            <h1>Assalomu Aleykum!</h1>
+            <button onclick="location.href='signup.html'">A'zo Bo'lish</button>
+            <button onclick="location.href='login.html'">Kirish</button>
+        </div>
+    </section>
+<br>
+    <hr>
+<br>
+
+<style>
+    .grid-container {
+      grid-gap: 10px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #b2b2b2;
+      padding: 10px;
+    }
+    
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    
+    /* Responsiveness */
+    @media screen and (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: auto auto;
+      }
+    
+      .grid-item {
+      
+        font-size: 16px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: auto;
+      }
+    
+      .grid-item {
+       
+        font-size: 14px;
+      }
+    }
+    
+    @media screen and (max-width: 320px) {
+      .grid-container {
+        grid-template-columns: auto;
+      }
+    
+      .grid-item {
+      
+        font-size: 12px;
+      }
+    }
+    </style>
+    
+
+
+<div class="grid-container">
+    
+
+    <div class="grid-item">
+        <img src="user.png" alt="" style="border-radius: 50%; height: 80px; width: 80px; float: left; margin:auto">
+            <div style="margin-left: 120px;">
+                <strong>Username</strong><br>
+                <i>Question</i>
+                <p style="font-size: 12px;">01.03.2003</p>
+            </div>
+    </div>
+
+    <div class="grid-item">
+      <img src="user.png" alt="" style="border-radius: 50%; height: 80px; width: 80px; float: left; margin:auto">
+          <div style="margin-left: 120px;">
+              <strong>Username</strong><br>
+              <i>Question</i>
+              <p style="font-size: 12px;">01.03.2003</p>
+          </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="user.png" alt="" style="border-radius: 50%; height: 80px; width: 80px; float: left; margin:auto">
+        <div style="margin-left: 120px;">
+            <strong>Username</strong><br>
+            <i>Question</i>
+            <p style="font-size: 12px;">01.03.2003</p>
+        </div>
+</div>
+
+
+</body>
+</html>

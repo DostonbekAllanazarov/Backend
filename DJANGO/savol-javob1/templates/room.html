@@ -1,0 +1,12 @@
+@{{question.user.username}}
+{{question}}
+<hr>
+{% for i in answers %}
+@{{request.user.username}}
+<p> {{i}} </p>
+{% endfor %}
+<form action="" method="post">
+    {% csrf_token %}
+    <textarea id="answer" name="answer" rows="10" cols="50"></textarea>
+    <p> <input type="submit" value="Saqlash"> </p>
+</form>

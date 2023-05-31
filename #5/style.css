@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#asosiy{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(181, 180, 180, 0.7),rgba(242, 226, 226, 0.7)), url(Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header{
+    width: 100%;
+}
+nav{
+    margin-left: 70px;
+}
+
+nav h1{
+    margin: 10px 10px;
+    color: #000000;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+nav ul{
+    display: inline-block;
+    margin-right:150px ;
+    margin-top: 20px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav ul li::after{
+    content: '';
+    display: block;
+    height: 0px;
+    width: 100%;
+    background: #000000;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+nav ul li:first-child::after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #000000;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+nav ul li:hover::after{
+    height: 3px;
+    transition: 0.3s;
+}
+
+.asosiy{
+    margin-top: 200px;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+
+}
+
+.asosiy h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.asosiy button{
+    width: 180px;
+    height: 45px;
+    margin-right: 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 3px solid #ff0019;
+    background: transparent;
+    color: #fa4659;
+}
+
+.asosiy button:hover{
+    background: #fa4659;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        margin-left: 20px;
+    }
+
+    nav ul {
+        float: none;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #asosiy {
+        background-size: contain;
+    }
+
+    .asosiy {
+        margin-top: 100px;
+    }
+
+    .asosiy h1 {
+        font-size: 40px;
+    }
+
+    .asosiy button {
+        width: 150px;
+        height: 35px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+}

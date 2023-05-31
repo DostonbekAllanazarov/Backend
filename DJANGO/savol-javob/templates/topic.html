@@ -1,0 +1,10 @@
+<html>
+<body>
+    {{requst.user.username}}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.theme}}
+        <input type="submit" value="Saqlash">
+        </form>
+</body>
+</html>

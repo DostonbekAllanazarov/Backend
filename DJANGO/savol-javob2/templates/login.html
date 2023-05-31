@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form>*{
+            margin: 15px;
+        }
+        form input{
+            font-size: 30px;
+
+        }
+        .regis{
+            border: 2px solid blue;
+            box-shadow: 2px 2px 2px 2px grey;
+            max-width: 500px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8%;
+        }
+        .helptext{
+            display: none;
+        }
+        .form-label{
+            display:none;
+        }
+        #image{
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+         <div class="regis">
+             <h1>Log In</h1>
+            <form action="" method="post">
+              {% csrf_token %}
+              <p><input type="text" name="username" id="username"></p>
+              <p><input type="password" name="password" id="password"></p>
+              <input type="submit" value="LogIn">
+            </form>
+            <p> <a href="{% url 'signup' %}">SignUp</a> </p>
+         </div>
+         <script>
+             document.getElementById('image').addEventListener('click', () =>{
+                   document.getElementById('file').click();
+             })
+             
+         </script>
+</body>
+</html>
